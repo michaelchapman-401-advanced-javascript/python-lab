@@ -4,7 +4,25 @@
 
   {% block title %} Sales {% endblock %}
 
-  <section id="merchandise"> 
-  </section> 
+  <section id="form">
+      <form id="addLocationForm">
+        <fieldset>
+          <label for="location">Location</label>
+          <input id="location" name="location" type="text" required minlength="1" pattern="[a-z A-Z]*"/>
+          <label for="maxCust">Max customers</label>
+          <input id="maxCust" name="maxCust" type="number" required/>
+          <label for="minCust">Min customers</label>
+          <input id="minCust" name="minCust" type="number" required/>
+          <label for="avgCookies">Average cookie sales</label>
+          <input id="avgCookies" name="avgCookies" type="number" required/>
+          <input type=Submit />
+        </fieldset>
+      </form>
+    </section>
+    <section id="salesTable">
+    </section>
+    <script src="./js/app.js"></script>
+
+  <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
 
 {% endblock %}
