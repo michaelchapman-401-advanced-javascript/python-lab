@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  {% endblock %}
+</head>
+<body id="home">
+  {% block header %}
+    <header>
+      <img src="{{ url_for('static', filename='images/salmon.png') }}" />
+      <h1>Salmon Cookies</h1>
+      <nav>
+        <a href="/"><p id="selected" class="navList">Home</p></a>
+        <a href="/sales"><p class="navList">Sales</p></a>
+      </nav>
+    </header>
+  {% endblock %}
+
+  {% block content %}{% endblock %}
+  
+  {% block footer %}
+    <footer>
+      <div>
+        <h4>&copy; 2019</h4>
+      </div>
+    </footer>
+  {% endblock %}
+  {% block script %}
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% endblock %}
+</body>
+</html>

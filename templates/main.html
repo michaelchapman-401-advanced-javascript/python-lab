@@ -1,14 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-  <title>Salmon Cookies</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body id="home">
+{% block content %}
 
-	<h1>{{ message }}</h1>
+  {% block title %} Home {% endblock %}
 
-</body>
-</html>
+  <section id="bodyContainer">
+      <section id="upperBody">
+        <article id="about">
+          <h3>About us:</h3>
+          <p>
+            At Salmon Cookies, we strive to bring you a delicious tasting cookie that is, in fact, shaped just like a salmon.
+            We do this because we find the salmon to be the most majestic living creature on the face of this earth and our passions are uncontrollable!
+            People call us crazy, but would crazy people introduce to the world cookies that represent the likeness and flavor of the most incredible creature to have ever lived?
+            No... No they wouldn't...
+          </p>
+        </article>
+        <figure id="family">
+          <img src="{{ url_for('static', filename='images/family.jpg') }}" />
+        </figure>
+      </section>
+      <hr></hr>
+      <section id="lowerBody">
+        <article id="locations">
+          <h3>Locations:</h3>
+          <ul id="locationList">
+            <li><a href="https://www.google.com/maps/place/Seattle,+WA/@47.6129432,-122.482147,11z/data=!3m1!4b1!4m5!3m4!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6062095!4d-122.3320708">Princeton, WV</a></li>
+            <li><a href="https://www.google.com/maps/place/Seattle-Tacoma+International+Airport/@47.4502499,-122.3110052,17z/data=!3m1!4b1!4m5!3m4!1s0x5490435542eafefd:0x99d3d9c4c7dc37b7!8m2!3d47.4502499!4d-122.3088165">Greenbrier, WV</a></li>
+            <li><a href="https://www.google.com/maps/place/Capitol+Hill,+Seattle,+WA/@47.6278632,-122.3333217,14z/data=!3m1!4b1!4m5!3m4!1s0x5490152857c86161:0xef487dc6bbc25185!8m2!3d47.625305!4d-122.3221835">Oak Hill, WV</a></li>
+            <li><a href="https://www.google.com/maps/place/Bend,+OR/@44.0611151,-121.3846841,12z/data=!3m1!4b1!4m5!3m4!1s0x54b8c0ffa5d3d251:0x1088e7acc720d1b4!8m2!3d44.0581728!4d-121.3153096">Charleston, WV</a></li>
+            <li><a href="https://www.google.com/maps/place/Alki,+Seattle,+WA+98116/@47.5768687,-122.4171479,14z/data=!3m1!4b1!4m5!3m4!1s0x54904089f02ed333:0x9aed4b8c925151c0!8m2!3d47.5754629!4d-122.4106578">Alki</a></li>
+          </ul>
+        </article>
+        <article id="hours">
+            <h3>Hours:</h3>
+            <ul id="hoursList">
+              <li>Monday: 6-8</li>
+              <li>Tuesday: 6-8</li>
+              <li>Wednesday: 6-8</li>
+              <li>Thursday: 6-8</li>
+              <li>Friday: 6-8</li>
+              <li>Saturday: 6-8</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </article>
+      </section>
+    </section>
+
+{% endblock %}
