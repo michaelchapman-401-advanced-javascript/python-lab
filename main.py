@@ -18,5 +18,5 @@ def sales():
     return render_template('sales.html')
 
 @app.route('/getAll', methods=['GET'])
-  def getAll();
-  # Get all from db
+def getAll():
+    return render_template('sales.html', message='This is a GET request. maybe???')
