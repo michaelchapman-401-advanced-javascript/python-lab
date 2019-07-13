@@ -4,24 +4,23 @@
   {% block head %}
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   {% endblock %}
 </head>
 <body id="home">
   {% block header %}
     <header>
-      {% block image%} {% endblock %}
+      <img src="{{ url_for('static', filename='images/salmon.png') }}" />
       <h1>Salmon Cookies</h1>
       <nav>
-        <ul>
-          <a href="/main"><li id="selected" class="navList">Home</li></a>
-          <a href="/sales"><li class="navList">Sales</li></a>
-        </ul>
+        <a href="/"><p id="selected" class="navList">Home</p></a>
+        <a href="/sales"><p class="navList">Sales</p></a>
       </nav>
     </header>
   {% endblock %}
 
-  <div id="content">{% block content %}{% endblock %}</div>
+  {% block content %}{% endblock %}
   
   {% block footer %}
     <footer>

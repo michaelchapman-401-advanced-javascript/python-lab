@@ -6,7 +6,7 @@
 
   <section id="bodyContainer">
       <section id="upperBody">
-        <article>
+        <article id="about">
           <h3>About us:</h3>
           <p>
             At Salmon Cookies, we strive to bring you a delicious tasting cookie that is, in fact, shaped just like a salmon.
@@ -15,8 +15,8 @@
             No... No they wouldn't...
           </p>
         </article>
-        <figure>
-          <img src="../images/family.jpg" />
+        <figure id="family">
+          <img src="{{ url_for('static', filename='images/family.jpg') }}" />
         </figure>
       </section>
       <hr></hr>
@@ -31,9 +31,18 @@
             <li><a href="https://www.google.com/maps/place/Alki,+Seattle,+WA+98116/@47.5768687,-122.4171479,14z/data=!3m1!4b1!4m5!3m4!1s0x54904089f02ed333:0x9aed4b8c925151c0!8m2!3d47.5754629!4d-122.4106578">Alki</a></li>
           </ul>
         </article>
-        <figure>
-          <img src="../images/fish.jpg" />
-        </figure>
+        <article id="hours">
+            <h3>Hours:</h3>
+            <ul id="hoursList">
+              <li>Monday: 6-8</li>
+              <li>Tuesday: 6-8</li>
+              <li>Wednesday: 6-8</li>
+              <li>Thursday: 6-8</li>
+              <li>Friday: 6-8</li>
+              <li>Saturday: 6-8</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </article>
       </section>
     </section>
 
